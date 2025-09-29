@@ -1,0 +1,410 @@
+/* General Reset and Font Setup */
+body {
+    font-family: 'Georgia', serif; /* Primary article font */
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, .main-nav, .logo {
+    font-family: 'Roboto Condensed', sans-serif; /* Use for headings and prominent text */
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 🌟 FIX FOR IMAGE OVERFLOW 🌟 */
+img {
+    max-width: 100%; /* Ensures images never exceed the width of their parent */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Helps with layout, removes extra space below images */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER STYLES --- */
+.header {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #000;
+}
+
+/* --- BUTTON STYLES (UPDATED) --- */
+/* Base button styles, now styling links/buttons to look like the image */
+.user-actions button,
+.user-actions a { /* Include 'a' tag if you use links for buttons */
+    padding: 8px 12px; /* Adjusted padding to match button size in the image */
+    border-radius: 5px; /* Added slight rounding */
+    font-size: 0.75em; /* Adjusted size */
+    cursor: pointer;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff; /* White text for all action buttons */
+    transition: background-color 0.15s;
+    display: inline-block; /* Ensure it behaves like a button */
+}
+
+/* Blue-Gray Button Color based on image_54a1ac.png */
+.subscribe,
+.login {
+    background-color: #5d7e97; 
+    border: 1px solid #5d7e97;
+    color: #fff;
+}
+
+.subscribe:hover,
+.login:hover {
+    background-color: #4b677b; /* Slightly darker shade on hover */
+    border-color: #4b677b;
+}
+/* --- END BUTTON STYLES --- */
+
+
+.main-nav {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; 
+    white-space: nowrap;
+}
+
+.main-nav a {
+    margin: 0 15px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* --- MAIN LAYOUT --- */
+
+.live-bar {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+}
+
+.live-tag {
+    color: #D60000; /* Red color for LIVE tag */
+    font-weight: 700;
+    margin-right: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.content-grid {
+    display: grid;
+    /* 3-column layout: main, gap, sidebar */
+    grid-template-columns: 3fr 1fr; 
+    gap: 40px;
+}
+
+/* --- MAIN STORIES SECTION --- */
+.main-stories {
+    border-right: 1px solid #ddd; /* Separator line from the screenshot */
+    padding-right: 40px;
+}
+
+.featured-story {
+    margin-bottom: 30px;
+}
+
+.featured-story .story-image {
+    /* Fixed height removed to let image define height via aspect ratio */
+    background-color: #ccc; 
+    margin-bottom: 15px;
+}
+
+.featured-story .headline {
+    font-size: 2.5em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.summary {
+    font-family: 'Georgia', serif;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.read-time {
+    font-size: 0.8em;
+    color: #777;
+    text-transform: uppercase;
+    display: block;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+/* Secondary Stories Layout */
+.secondary-stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for smaller articles */
+    gap: 30px;
+}
+
+.story-card {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.story-card .headline {
+    font-size: 1.4em;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.story-card .story-image-small {
+    /* Fixed height removed */
+    background-color: #ddd; 
+    margin-top: 10px;
+}
+
+.story-card.live .live-tag {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Briefing Box Style */
+.briefing-box {
+    background-color: #f7f7f7; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.briefing-box .tag {
+    font-size: 0.7em;
+    color: #777;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.headline-box {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+.briefing-box .source, .briefing-box .date {
+    font-size: 0.7em;
+    color: #777;
+    display: block;
+    margin-top: 10px;
+}
+
+/* --- SIDEBAR STYLES --- */
+.sidebar {
+    padding-top: 10px;
+}
+
+.sidebar-card {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 25px;
+}
+
+.sidebar-card .card-image {
+    /* Fixed height removed */
+    background-color: #eee;
+    margin-bottom: 10px;
+}
+
+.sidebar-card .headline {
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.sidebar-card .source {
+    font-size: 0.8em;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+}
+
+.opinion-section .section-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.opinion-section hr {
+    margin: 10px 0 20px 0;
+}
+
+.opinion-card {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.opinion-card .byline {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.opinion-card .opinion-image {
+    /* Fixed height removed */
+    background-color: #ddd;
+    margin-top: 15px;
+}
+
+
+/* --- MEGA-FOOTER STYLES --- */
+
+.mega-footer {
+    background-color: #fff; 
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.footer-col {
+    width: 15%; 
+    min-width: 150px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.col-title {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.footer-col li {
+    margin-bottom: 5px;
+}
+
+.footer-col a {
+    font-size: 0.85em;
+    color: #333;
+    display: inline-block;
+}
+
+/* Account Column Styling */
+.account-col ul:first-of-type {
+    margin-top: 0; 
+}
+
+.account-col .action-item {
+    margin-bottom: 15px;
+}
+
+.account-col .action-item a {
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+/* Coloring the action text */
+.subscribe-text { color: #000; }
+.manage-text { color: #000; }
+.home-text { color: #000; }
+.gift-text { color: #000; }
+
+/* Styling for the very bottom line of links */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+    font-size: 0.75em;
+    color: #666;
+}
+
+.copyright-links span,
+.copyright-links a {
+    margin-right: 15px;
+    color: #666;
+    display: inline-block;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1200px) {
+    .footer-col {
+        width: 30%; /* Adjust for slightly smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Single column layout for main content */
+    }
+
+    .main-stories {
+        border-right: none;
+        padding-right: 0;
+    }
+    
+    .footer-col {
+        width: 45%; /* Two columns per row in the footer */
+    }
+}
+
+@media (max-width: 600px) {
+    .secondary-stories {
+        grid-template-columns: 1fr; /* Stack the secondary stories */
+    }
+
+    .footer-col {
+        width: 100%; /* Stack footer columns */
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    .copyright-links a {
+        display: block;
+        margin: 5px 0;
+    }
+}
